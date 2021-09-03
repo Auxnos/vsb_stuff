@@ -27,6 +27,9 @@ if s then return end
 if input.KeyCode.Name:lower() == "f" then
 FlyMode = not FlyMode
 end
+if input.KeyCode.Name:lower() == "k" then
+mainpos = CFrame.new(0,25,0)
+end
 end)
 owner.MouseFolder.MoveRemote.OnClientEvent:connect(function(wl)
             RayProperties.FilterDescendantsInstances = wl
@@ -68,8 +71,12 @@ game:GetService("RunService").RenderStepped:Connect(function()
     if not FlyMode then
    if _Ray then
    
-    mainpos = CFrame.new(0,(_Ray.Position.Y-mainpos.Y)+3,0)*mainpos
+    pcall(function()
+                        mainpos = CFrame.new(0,(_Ray.Position.Y-mainpos.Y)+3,0)*mainpos
+                        end)
     end
+else
+            mainpos = CFrame.new(0,25,0)
     end
     if KeyDown("W") then
         PotentialCFrame = PotentialCFrame *  CFrame.new(0,0,-1)
