@@ -31,8 +31,13 @@ if input.KeyCode.Name:lower() == "k" then
 mainpos = CFrame.new(0,25,0)
 end
 end)
-owner.MouseFolder.MoveRemote.OnClientEvent:connect(function(wl)
-            RayProperties.FilterDescendantsInstances = wl
+owner.MouseFolder.MoveRemote.OnClientEvent:connect(function(method,args)
+            if method == "whitelist" then
+            
+            ayProperties.FilterDescendantsInstances = args
+elseif method == "camera" then
+workspace.CurrentCamera.CameraSubject = args
+end
 end)
     local MouseProps,Hit,Target = RaycastParams.new(),CFrame.new(),nil
 game:GetService("RunService").RenderStepped:Connect(function()
@@ -52,10 +57,6 @@ game:GetService("RunService").RenderStepped:Connect(function()
             Value = mainpos
         }):Play()
         owner.MouseFolder.MoveRemote:FireServer("Mainpos",CFrameValue.Value,Moving,FlyMode)
-    end)
-    pcall(function()
-    Part = workspace[LocalPlayer.Name].Head
-    workspace.CurrentCamera.CameraSubject = Part
     end)
     if FlyMode then
         PotentialCFrame = CFrame.new(mainpos.p,mainpos.p+LookVector)
