@@ -114,11 +114,11 @@ while owner.Character do
 	else
 		Hum.AutoRotate = true
     end
-    local system = game:GetService("ReplicatedStorage"):FindFirstAncestor("mollar-mollar-system")
+    local system = game:GetService("ReplicatedStorage"):FindFirstChild("mollar-mollar-system")
     if system then
         local events = system:FindFirstChild("mollar-events")
         if events then
-            local event = events:FindFirstChild("TurnCharacter")
+            local event = events:FindFirstChild("CameraEvent")
             if event then
                 if IsR6 then
                     event:FireServer("R6",{Neck_.C0})
