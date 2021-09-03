@@ -32,9 +32,8 @@ mainpos = CFrame.new(0,25,0)
 end
 end)
 owner.MouseFolder.MoveRemote.OnClientEvent:connect(function(method,args)
-            if method == "whitelist" then
-            
-            RayProperties.FilterDescendantsInstances = args
+if method == "whitelist" then
+RayProperties.FilterDescendantsInstances = args
 elseif method == "camera" then
 workspace.CurrentCamera.CameraSubject = args
 end
