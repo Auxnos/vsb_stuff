@@ -19,7 +19,7 @@ do
     CommandInfo.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     Info_Outer.Name = "Info_Outer"
     Info_Outer.Parent = CommandInfo
-    Info_Outer.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+    Info_Outer.BackgroundColor3 = Color3.fromRGB(245, 196, 0)
     Info_Outer.BorderSizePixel = 0
     Info_Outer.Position = UDim2.new(0.263078094, 0, 0.474327505, 0)
     Info_Outer.Size = UDim2.new(0.472327799, 0, 0.294376493, 0)
@@ -54,7 +54,7 @@ do
     Commands.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     Outer_Commands.Name = "Outer_Commands"
     Outer_Commands.Parent = Commands
-    Outer_Commands.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+    Outer_Commands.BackgroundColor3 = Color3.fromRGB(245, 196, 0)
     Outer_Commands.BorderSizePixel = 0
     Outer_Commands.Position = UDim2.new(0.874147058, 0, 0.556234598, 0)
     Outer_Commands.Size = UDim2.new(0.125852823, 0, 0.443765283, 0)
